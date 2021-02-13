@@ -1,0 +1,6 @@
+#parent {
+  display: flex;
+  justifycontent: center;
+  alignitems: center;
+  height: 100vh;
+}
