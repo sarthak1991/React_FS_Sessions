@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
+import Home from "./pages/Home/"
+
 
 class John extends Component {
 
   render() {
     return (
       <div>
-        <div>
-          first div
-    </div>
-        <div>
-          second div
-    </div>
+        <Home />
+
       </div>
     )
   }
