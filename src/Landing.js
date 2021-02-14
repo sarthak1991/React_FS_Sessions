@@ -26,11 +26,14 @@ const studentsClass = [
 // )}
 
 
+// {studentsClass.map(student => <Name name={student.studName} lastname={student.lastName} movie={student.movie} ></Name>)}
 class Landing extends Component {
     render() {
         return (
             <div id="parent">
-                {studentsClass.map(student => <Name name={student.studName} lastname={student.lastName} movie={student.movie} date={new Date()} ></Name>)}
+                <Name name="Manish" lastname="Kamti" movie="Iron man"></Name>
+                <Name name="Sahil" lastname="Debnath" movie="spiderman"></Name>
+                <Name name="Shashank" lastname="Jha" movie="thorman"></Name>
             </div>
         )
 
