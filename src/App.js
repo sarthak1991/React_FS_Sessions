@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Home from "./pages/Home/"
+import Contact from "./pages/Contact/Contact"
 
 
 class John extends Component {
@@ -8,6 +9,7 @@ class John extends Component {
     return (
       <div>
         <Home />
+        <Contact />
 
       </div>
     )
