@@ -1,25 +1,35 @@
-import React, { Component } from 'react';
+import React, { Component, useContext, useState } from 'react';
 import Home from "./pages/Home/"
 import Contact from "./pages/Contact/Contact"
+import Batch from "./pages/Batch"
 
 
-class John extends Component {
+const App = () => {
 
-  render() {
-    return (
-      <div>
-        <Home />
-        <Contact />
+  const [textState, setTextState] = useState("test value");
 
-      </div>
-    )
-  }
+
+
+  return (
+    <div>
+      <Home />
+
+
+
+
+      <Contact />
+
+      <Batch sentGender="boy" batchmateName="Pushpinder" />
+
+
+
+
+
+    </div>
+  )
 }
 
-export default John;
 
-// const John = () => {
+export default App;
 
-// }
 
-// export default John

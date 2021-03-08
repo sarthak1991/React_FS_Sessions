@@ -57,11 +57,15 @@
 //     }
 // }
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
+
 
 const Contact = () => {
-    const [nameOfBatchmate, setNameOfBatchmate] = useState("Honnaraju")
+    const [nameOfBatchmate, setNameOfBatchmate] = useState("Honnaraju");
     const [posts, setPosts] = useState([])
+
+
+    let inputRef = useRef()
 
     useEffect(async () => {
         try {
@@ -73,14 +77,27 @@ const Contact = () => {
         }
     }, [])
 
+
     const clickHandler = () => {
         setNameOfBatchmate("Sarthak")
+        console.log(inputRef.current.focus());
     }
+
     return (
         <div>
             Hello, my functional component name is {nameOfBatchmate}
             <button onClick={clickHandler}>Click me</button>
-            {posts.map(singlePost => {
+            <div>
+                <input id="refThisOut" placeholder="We'll use refs here" ref={inputRef} />
+            </div>
+
+
+            {/* HW --> 
+            make a text element
+            on click, change text element value to your city. 
+            */}
+
+            {/* {posts.map(singlePost => {
                 return (
                     <div>
                         <hr></hr>
@@ -89,7 +106,7 @@ const Contact = () => {
                         <hr></hr>
                     </div>
                 )
-            })}
+            })} */}
         </div>
     )
 }
