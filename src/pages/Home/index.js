@@ -17,8 +17,18 @@ function Home() {
     }
     return (
         <div>
+            <hr></hr>
+            <p>
+                Home component starts
+
+            </p>
             {newState}
             <button onClick={clickHandler}>Update state</button>
+            <p>
+                Home component ends
+
+            </p>
+            <hr></hr>
         </div>
     )
 }

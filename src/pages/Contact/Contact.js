@@ -78,18 +78,27 @@ const Contact = () => {
     }
     return (
         <div>
+            <hr></hr>
+            <p>
+                Contact componenet starts
+               </p>
             Hello, my functional component name is {nameOfBatchmate}
             <button onClick={clickHandler}>Click me</button>
-            {posts.map(singlePost => {
+            <p>
+                Contact component Ends
+
+            </p>
+            <hr></hr>
+            {/* {posts.map(singlePost => {
                 return (
                     <div>
-                        <hr></hr>
+
                         <p>this is the post id = {singlePost.id}</p>
                         <p>title = {singlePost.title}</p>
-                        <hr></hr>
+                        
                     </div>
                 )
-            })}
+            })} */}
         </div>
     )
 }
