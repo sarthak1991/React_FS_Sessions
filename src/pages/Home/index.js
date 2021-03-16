@@ -3,23 +3,39 @@ import { useState, useEffect } from "react"
 function Home() {
     const [newState, setNewState] = useState("This is the new state's original value")
     const [data, setData] = useState([])
+    const [digit, setDigit] = useState(0)
+    const [newDigit, setNewDigit] = useState(5)
 
     useEffect(() => {
-        fetch(URL)
-            .then(response => response.json())
-            .then(recievedDataFromApi => setData(recievedDataFromApi))
-            .catch(err => console.log(`This is the error ${err}`))
-    }, [])
+        console.clear()
+        console.log("re-rendered")
+    }, [digit])
 
     const clickHandler = (e) => {
         setNewState("This is the updated value")
         console.log(data);
+    }
+
+    const increment = () => {
+        console.log("incremented");
+        setDigit(digit + 1)
+    }
+    const decrement = () => {
+        console.log("decremented");
+        setNewDigit(newDigit - 1)
     }
     return (
         <div>
             <hr></hr>
             <p>
                 Home component starts
+                <div>
+                    <button onClick={increment}> Increment DIGIT---> </button>
+                    <span>{digit}</span>
+                    <button onClick={decrement}> Decrement NEW DIGIT---></button>
+                    <span>{newDigit}</span>
+                </div>
+
 
             </p>
             {newState}
